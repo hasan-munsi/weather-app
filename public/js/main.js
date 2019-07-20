@@ -21,7 +21,7 @@ const getMyHour = (unix)=>{
 }
 form.addEventListener('submit',(e)=>{
     e.preventDefault()
-        fetch('http://localhost:3000/weather?location='+input.value).then((res)=>{
+        fetch('/weather?location='+input.value).then((res)=>{
         res.json().then((data)=>{
             if(data.summary===undefined)
             {
